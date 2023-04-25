@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MauThiKimTho</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../bootstrap-4.6.2-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+    <script src="../bootstrap-4.6.2-dist/js/bootstrap.js"></script>
+
+</head>
+
+<body>
+    <!-- container -->
+    <div class="container-fluid">
+
+        <!-- banner -->
+        <div id="banner" class="row">
+            <img id="img-banner" src="../IMAGE/banner.png" alt="" srcset="">
+            <p id="txt-banner"></p>
+        </div>
+
+        <!-- narbar -->
+        <nav class="navbar navbar-expand-sm">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../HTML/Index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a id="myBtn" class="nav-link" href="#" onclick="openModal()">Đặt lịch</a>
+                    <!-- href phải có # đẻ giữ model mở -->
+                </li>
+            </ul>
+        </nav>
+
+        <!-- table -->
+        <table id="table-main" class="table border-bottom border-top border-dark">
+            <!-- title table -->
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Mã bệnh nhân</th>
+                    <th>Mật khẩu</th>
+                    <th>Ngày khám</th>
+                    <th>Phụ thu dịch vụ</th>
+                    <th>Chuyên khoa</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <div id="conten-modal">
+                <span class="close">&times;</span>
+
+                <h2 class="col-12 text-left pb-4"> ĐẶT LỊCH KHÁM ONLINE</h2>
+                <form onsubmit="addPatient(); return false;">
+                    <!-- mã bệnh nhân -->
+                    <div class="row pl-4">
+                        <p class="font-weight-bold mb-1">Mã bệnh nhân</p>
+                    </div>
+                    <div class="row pl-4 pb-2 pt-1">
+                        <input type="text" id="maBenhNhan" required placeholder="Nhập mã bệnh nhân" class="col-5">
+                        <span class="col-1 text-danger text-center">*BN_YYYYYY</span>
+                    </div>
+
+                    <!-- mật khẩu -->
+                    <div class="row pl-4">
+                        <p class="font-weight-bold mb-1">Mật khẩu</p>
+                    </div>
+                    <div class="row pl-4 pb-2">
+                        <input type="text" id="matKhau" required placeholder="Nhập mật khẩu" class="col-5 input-tk">
+                        <span class="col-1 text-danger text-center">*</span>
+                    </div>
+
+                    <!-- ngày khám -->
+                    <div class="row pl-4">
+                        <p class="font-weight-bold mb-1">Ngày khám</p>
+                    </div>
+                    <div class="row pl-4">
+                        <input type="date" id="ngayKham" required class="date">
+                        <span class="col-1 text-danger text-center">*</span>
+                    </div>
+
+                    <!-- Loại dịch vụ -->
+                    <div class="row pl-4 pt-3">
+                        <p class="font-weight-bold mb-1">Loại dịch vụ</p>
+                    </div>
+                    <div class="row pl-4 pb-2">
+                        <input type="checkbox" id="phuThu1" value="50000">
+                        <label for="phuThu1">Khám chữa bệnh theo yêu cầu (50,000đ)</label>
+                        <input type="checkbox" id="phuThu2" value="100000">
+                        <label for="phuThu2">Điều trị ngoại trú (100,000đ)</label>
+                        <input type="checkbox" id="phuThu3" value="150000">
+                        <label for="phuThu3">Bác sĩ theo yêu cầu (150,000đ)</label>
+                    </div>
+
+                    <!-- Chuyên khoa -->
+                    <div class="row pl-4">
+                        <p class="font-weight-bold mb-1">Chuyên khoa</p>
+                    </div>
+                    <div class="row pl-4 pb-2">
+                        <select id="chuyenKhoa" required>
+                            <option value="Chuyên Khoa Nội">Chuyên khoa nội</option>
+                            <option value="Chuyên Khoa Ngoại" selected>Chuyên khoa ngoại</option>
+                            <option value="Chuyên Khoa Ngọai Lồng Ngực">Chuyên khoa ngoại lồng ngực</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="Đặt lịch" class="bg-primary border-0">
+                </form>
+
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div id="footer" class="row d-flex align-items-center">
+            <p id="txt-footer" class="col-12 text-center font-weight-bold border"> - 
+</html>
+<!-- lỗi dấu X close -->
