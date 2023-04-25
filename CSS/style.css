@@ -14,41 +14,43 @@
     position: absolute;
     font-size: 40px;
     font-weight: bold;
-    color: blue;
+    color: rgb(18, 18, 19);
     padding-top: 250px;
 }
 
-/* Style cho modal */
+
 .modal {
     display: none;
-    /* Không hiển thị modal khi load trang */
+ 
     position: fixed;
-    /* Đặt vị trí cố định */
+   
     z-index: 1;
-    /* Chỉ định độ ưu tiên z-index cao nhất */
+
     width: 100%;
-    /* Chiều rộng toàn bộ màn hình */
+  
     height: 100%;
-    /* Chiều cao toàn bộ màn hình */
+    
     background-color: rgba(0, 0, 0, 0.4);
-    /* backgroup sau modal */
+
+}
+.nav-item{
+    background-color: rgb(175, 165, 165);
+    color: #888;
 }
 
-/* Style cho nội dung của modal */
 #conten-modal {
     background-color: #fefefe;
     border: 1px solid #888;
     width: 50%;
     height: 70%;
-    /* độ dài và động rộng của modal bằng 50% chiều dài và chiều rộng của trang */
+ 
     position: fixed;
-    /* cố định vị trí modal */
+  
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/* Style cho nút đóng modal */
-/* Style cho nút đóng modal */
+
 .close {
     color: #aaa;
     float: right;
@@ -62,7 +64,7 @@
     text-decoration: none;
     cursor: pointer;
 }
-/* footer */
+
 #txt-footer{
     font-size: 30px;
     color: cadetblue;
